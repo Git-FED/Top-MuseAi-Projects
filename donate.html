@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090a0c">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Donate to Git-FED — Thanks.dev</title>
+</head>
+<body>
+  <div class="ticker"><div class="ticker-track"><span>DONATE THE SIGNAL</span><b>✳</b><span>GIT-FED / THANKS.DEV</span><b>✳</b><span>18+ CHECKOUT GATE</span><b>✳</b><span>DONATE THE SIGNAL</span><b>✳</b></div></div>
+  <header class="site-header shell">
+    <a class="brand" href="index.html"><img src="assets/logo-muse-index.svg" alt="Muse Index symbol logo"></a>
+    <nav><a href="index.html">Index</a><a href="promo.html">Promo lab</a><a href="community.html">Community</a><a href="donate.html" aria-current="page">Donate</a></nav>
+  </header>
+
+  <main class="shell donate-page">
+    <div class="eyebrow"><span class="pulse"></span> Git-FED / thanks.dev</div>
+    <section class="donate-card" aria-labelledby="donate-title">
+      <div class="donate-signal">PUBLIC REPO SUPPORT CHANNEL</div>
+      <img class="donate-avatar" src="assets/git-fed-avatar.jpg" alt="Git-FED's Muse avatar — a dark brown furry character with spiky black hair, holding an orange four-star ball, sitting on a yellow cloud">
+      <h1 id="donate-title">Keep the open signal<br><em>fed and strange.</em></h1>
+      <p class="donate-copy">If this catalog, the Git-FED repos, or the weird little ecosystem helped you, you can send support through Thanks.dev. The destination is external and handles the donation flow itself.</p>
+      <button class="primary donate-unlock" id="donate-unlock">Unlock donation <span>→</span></button>
+      <a class="donate-cta" id="donate-cta" href="https://thanks.dev/d/gh/git-fed/dependencies" target="_blank" rel="noopener noreferrer" aria-disabled="true">
+        <span class="donate-main">DONATE</span><span class="donate-sub">thanks.dev / Git-FED</span>
+      </a>
+      <p class="donate-note">18+ confirmation is required before opening the external donation page. No card details are collected here.</p>
+      <a class="text-link" href="support.html">See all support rails →</a>
+    </section>
+  </main>
+
+  <div class="age-modal" id="donate-modal" aria-hidden="true">
+    <div class="age-dialog" role="dialog" aria-modal="true" aria-labelledby="donate-age-title">
+      <button class="modal-close" id="donate-close" aria-label="Close age confirmation">×</button>
+      <div class="eyebrow">18+ confirmation</div>
+      <h2 id="donate-age-title">Before donation,<br><em>quick age check.</em></h2>
+      <p>This external donation destination is intended for adults. Confirm you are 18 or older to continue.</p>
+      <label class="check"><input type="checkbox" id="donate-age-check"> <span>I am 18 or older and understand the donation opens on Thanks.dev.</span></label>
+      <button class="primary" id="donate-confirm" disabled>Continue to Thanks.dev <span>→</span></button>
+    </div>
+  </div>
+
+  <footer class="fed-footer shell" id="fed-footer">
+    <div class="fed-footer-top"><div><div class="footer-kicker">FED-OS / signal network</div><h2>Stay close to<br><em>the signal.</em></h2></div><img class="footer-gremlin" src="assets/signal-gremlin.svg" alt="Signal Gremlin mascot"></div>
+    <div class="footer-grid">
+      <section><h3>Explore</h3><a href="https://www.fedpromptly.org" target="_blank" rel="noopener noreferrer"><span>✳</span> Ecosystem</a><a href="https://www.fedpromptly.com/aid" target="_blank" rel="noopener noreferrer"><span>↗</span> FED-OS membership</a><a href="https://www.jabburr.com/fed-os" target="_blank" rel="noopener noreferrer"><span>▣</span> Storefront</a><a href="https://whop.com/fedpromptly/" target="_blank" rel="noopener noreferrer"><span>◈</span> Whop</a></section>
+      <section><h3>Contact</h3><a href="mailto:contact@fedpromptly.com"><span>✉</span> General</a><a href="mailto:support@fedpromptly.com"><span>✉</span> Support</a><a href="mailto:business@fedpromptly.com"><span>✉</span> Business</a><a href="mailto:careers@fedpromptly.com"><span>✉</span> Careers</a></section>
+      <section><h3>Media</h3><a href="https://substack.com/@fedpromptly" target="_blank" rel="noopener noreferrer"><span>↗</span> Articles</a><a href="https://fedpromptly.wordpress.com/" target="_blank" rel="noopener noreferrer"><span>✎</span> Blog</a><a href="https://gitfed.substack.com/" target="_blank" rel="noopener noreferrer"><span>✦</span> GitFed Blog</a><a href="https://www.deviantart.com/fedpromptly" target="_blank" rel="noopener noreferrer"><span>◇</span> Artwork</a></section>
+      <section><h3>Social</h3><a href="https://discord.gg/Jm4XStx4Pf" target="_blank" rel="noopener noreferrer"><span>◉</span> Developers / Discord</a><a href="https://bsky.app/profile/fed-os.bsky.social" target="_blank" rel="noopener noreferrer"><span>✦</span> Bluesky</a><a href="https://x.com/Fedpromptly" target="_blank" rel="noopener noreferrer"><span>𝕏</span> Advertisement / X</a><a href="https://www.buymeacoffee.com/fedpromptly" target="_blank" rel="noopener noreferrer"><span>☕</span> Tips / donations</a><a href="private-communities.html"><span>▣</span> Private communities <b class="footer-lock">18+</b></a></section>
+    </div>
+    <div class="footer-bottom"><span>FACTS ABOUT PUBLIC REPOS · MIT</span><span>NO ORBITS · GOOD SIGNAL ONLY</span><a href="index.html#top">Back to top ↑</a></div>
+  </footer>
+
+  <script>
+    const modal = document.querySelector('#donate-modal');
+    const check = document.querySelector('#donate-age-check');
+    const confirm = document.querySelector('#donate-confirm');
+    const close = document.querySelector('#donate-close');
+    const unlock = document.querySelector('#donate-unlock');
+    const cta = document.querySelector('#donate-cta');
+    unlock.onclick = () => { modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); check.focus(); };
+    check.onchange = () => { confirm.disabled = !check.checked; };
+    close.onclick = () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); };
+    modal.onclick = event => { if (event.target === modal) close.onclick(); };
+    confirm.onclick = () => {
+      if (!check.checked) return;
+      modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true');
+      cta.setAttribute('aria-disabled', 'false'); cta.classList.add('is-unlocked'); cta.focus();
+    };
+    cta.addEventListener('click', event => { if (cta.getAttribute('aria-disabled') !== 'false') { event.preventDefault(); unlock.click(); } });
+  </script>
+</body>
+</html>
